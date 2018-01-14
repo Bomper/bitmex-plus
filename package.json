@@ -1,0 +1,46 @@
+{
+  "name": "bitmex-plus",
+  "version": "1.2.0",
+  "description": "BitMEX (un)authenticated REST and WebSocket helper methods",
+  "main": "index",
+  "scripts": {
+    "lint": "eslint *.mjs",
+    "prepare": "babel index.mjs --out-file index.js",
+    "test": "node --experimental-modules test.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bomper/bitmex-plus"
+  },
+  "files": [
+    "index.mjs",
+    "index.js"
+  ],
+  "keywords": [
+    "BitMEX",
+    "API",
+    "client",
+    "library",
+    "cryptocurrency",
+    "Bitcoin",
+    "BTC",
+    "crypto"
+  ],
+  "author": {
+    "name": "Ben Bomper",
+    "url": "https://github.com/bomper"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "bitmex-realtime-api": "^0.2.6",
+    "node-fetch": "^1.7.3",
+    "qs": "^6.5.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.0",
+    "eslint": "^4.15.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.8.0"
+  }
+}
