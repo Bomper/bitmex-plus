@@ -70,7 +70,8 @@ export class BitMexPlus extends BitMEXWs {
     };
     if (verb !== 'GET') requestOptions.body = postBody;  // GET/HEAD requests can't have body
 
-    const url = 'https://www.bitmex.com' + apiRoot + endpoint + query;
+    const apiBase = this.options.testnet ? 'https://testnet.bitmex.com' : 'https://www.bitmex.com';
+    const url = apiBase + apiRoot + endpoint + query;
 
     return fetch(url, requestOptions).then(response => response.json()).then(
       response => {
