@@ -1,6 +1,6 @@
 {
   "name": "bitmex-plus",
-  "version": "1.3.0",
+  "version": "1.3.1",
   "description": "BitMEX (un)authenticated REST and WebSocket helper methods",
   "main": "index",
   "scripts": {
@@ -32,13 +32,13 @@
   },
   "license": "MIT",
   "dependencies": {
-    "bitmex-realtime-api": "^0.2.6",
+    "bitmex-realtime-api": "^0.3.0",
     "node-fetch": "^1.7.3",
     "qs": "^6.5.1"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
-    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.0",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
     "eslint": "^4.15.0",
     "eslint-config-airbnb-base": "^12.1.0",
     "eslint-plugin-import": "^2.8.0"

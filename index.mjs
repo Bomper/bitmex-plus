@@ -32,10 +32,10 @@ export class BitMexPlus extends BitMEXWs {
 
   /**
    * Send a request to the BitMEX REST API. See https://www.bitmex.com/api/explorer/.
-   * @param {String} verb - GET/PUT/POST/DELETE
-   * @param {String} endpoint - e.g. `/user/margin`
-   * @param {Object} data - JSON
-   * @returns {Promise<Response>} - the [result of fetch()](https://github.com/bitinn/node-fetch#class-response)
+   * @param {string} verb - GET/PUT/POST/DELETE
+   * @param {string} endpoint - e.g. `/user/margin`
+   * @param {object} data - JSON
+   * @returns {Promise<object>} - JSON response
    */
   makeRequest(verb, endpoint, data = {}) {
     const apiRoot = '/api/v1/';
@@ -76,7 +76,7 @@ export class BitMexPlus extends BitMEXWs {
     return fetch(url, requestOptions).then(response => response.json()).then(
       response => {
         if ('error' in response)
-          throw new Error(response.error.message);
+          throw new Error(`${response.error.message} during ${verb} ${endpoint} with ${JSON.stringify(data)}`);
         return response;
       }, error => {
         throw new Error(error);
